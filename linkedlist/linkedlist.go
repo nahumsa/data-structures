@@ -72,6 +72,7 @@ func (linkedList *LinkedList) NodeWithProperty(property int) *Node {
 			break
 		}
 	}
+	fmt.Println(nodeWith)
 	return nodeWith
 }
 
@@ -86,4 +87,22 @@ func (linkedList *LinkedList) AddAfter(nodeProperty, property int) {
 		node.NextNode = nodeWith.NextNode
 		nodeWith.NextNode = node
 	}
+}
+
+// DeleteProperty deletes an element with a given property.
+func (linkedList *LinkedList) DeleteProperty(property int) {
+	var node *Node
+	var previousNode *Node
+
+	for node = linkedList.HeadNode; node != nil; node = node.NextNode {
+		if node.NextNode.Property == property {
+			previousNode = node
+			break
+		}
+	}
+
+	if previousNode != nil {
+		previousNode.NextNode = previousNode.NextNode.NextNode
+	}
+
 }

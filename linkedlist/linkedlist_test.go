@@ -46,3 +46,22 @@ func TestAddAfter(t *testing.T) {
 		}
 	}
 }
+
+func TestDelete(t *testing.T) {
+	firstProperty := 5
+	linkedlist := LinkedList{}
+	linkedlist.AddToHead(firstProperty)
+
+	want := []int{10, 50}
+	adds := []int{10, 50, 100}
+	for _, values := range adds {
+		linkedlist.AddToEnd(values)
+	}
+	for _, property := range want {
+		linkedlist.DeleteProperty(property)
+		gotNode := linkedlist.NodeWithProperty(property)
+		if gotNode != nil {
+			t.Errorf("Expected was %v, we got %v", property, gotNode.Property)
+		}
+	}
+}
