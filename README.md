@@ -23,3 +23,7 @@ A binary search tree is a non-linear data structure that sorts elements that are
 value on the left branch and less than a given value on the right branch. The space complexity of this
 structure is O(N) and time complexity of searching in this structure is O(log N), where N is the number
 of elements on the binary tree.
+
+## Queues
+
+Queues are a set of elements ordered by priority, thus elements with higher priority comes first.
