@@ -103,7 +103,4 @@ func (linkedList *LinkedList) DeleteProperty(property int) {
 		}
 	}
 
-	if node == nil {
-		node = &Node{}
-	}
 }
