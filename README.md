@@ -1,7 +1,8 @@
 # Data Structures on Go
 
-In this repository I plan to implemment data structres in Go. The code is based on the book
+In this repository I plan to implemment data structures in Go. The code is based on the book
 by [Kommadi - Learn data structures and algorithms with golang](https://www.packtpub.com/product/learn-data-structures-and-algorithms-with-golang/9781789618501).
+
 
 
 ## Linked List
